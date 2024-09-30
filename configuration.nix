@@ -23,7 +23,7 @@
 
 
   i18n = {
-    defaultLocale = "en_GB.UTF-8";
+    defaultLocale = "fr_FR.UTF-8";
     extraLocaleSettings = {
       LC_ADDRESS = "fr_FR.UTF-8";
       LC_IDENTIFICATION = "fr_FR.UTF-8";
@@ -66,10 +66,16 @@
     vim = {
       defaultEditor = true;
     };
-    zsh = {
+    fish = {
       enable = false;
+    };
+    zsh = {
+      enable = true;
+      enableCompletion = true;
+      autosuggestions.enable = true; 
+      syntaxHighlighting.enable = true;
       ohMyZsh = {
-        enable = false;
+        enable = true;
         theme = "agnoster";
         plugins = [
           "sudo"
@@ -179,8 +185,6 @@
   };
 
   security.sudo.extraRules = [
-    # Allow execution of any command by all users in group sudo,requiring a password.
-    # Allow certain specific commands without the use of a password
     { groups = [ "sudo" ]; commands = [ "ALL" ]; }
     { users = [ "fkozmik" ];
       commands = [ 
