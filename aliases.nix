@@ -3,6 +3,10 @@
     alias gs='git status'
     alias gd='git diff'
     alias gl='git log --oneline'
+    alias gpf='git push --force-with-lease'
+    alias gogit="cd ~/Documents/git/ && ls"
+    alias accesscreator="~/vault-tuleap-dynamic-creds-helper.phar --lease-ttl-increment=2h"
+    alias login="evlogin && vault token renew -increment=2h"
 
     function rebase {
         git fetch upstream
@@ -17,10 +21,12 @@
             nix-shell --command "evlogin; poetry shell; return"
     }
 
-    alias gogit="cd ~/Documents/git/ && ls"
-
-    alias godev="cd ~/tuleap && git pull && git reset --hard HEAD && nix-shell"
-
+    function godev {
+          cd ~/tuleap
+          git pull
+          git reset --hard HEAD
+          nix-shell
+    }
 
     function logseq-commit {
         cd ~/Documents/git/Logseq
@@ -32,12 +38,6 @@
             logseq-commit
             git push origin main
     }
-
-    alias accesscreator="~/vault-tuleap-dynamic-creds-helper.phar" #--lease-ttl-increment=2h"
-
-    alias tsnodeup="sudo tailscale set --exit-node=100.101.59.148 --accept-routes"
-
-    alias tsup="sudo tailscale up --exit-node= --accept-routes"
 
   '';
 }

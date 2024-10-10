@@ -6,6 +6,8 @@
       ./aliases.nix
       ./hardware-configuration.nix
       ./networking-clients.nix
+      ./system-packages.nix
+      ./users.nix
     ];
 
   boot = {
@@ -63,12 +65,16 @@
   };
 
   programs = {
-    vim = {
-      defaultEditor = true;
-    };
+    direnv = {
+      enable = true;
+      loadInNixShell = true;
+      nix-direnv.enable = true;
+      };
     fish = {
       enable = false;
     };
+    vim.defaultEditor = true;
+    virt-manager.enable = true;
     zsh = {
       enable = true;
       enableCompletion = true;
@@ -81,96 +87,14 @@
           "sudo"
           "systemadmin"
           "vi-mode"
-          "direnv"
         ];
       };
     };
   };
 
-  virtualisation.docker.enable = true;
-
-  users.users.fkozmik = {
-    isNormalUser = true;
-    description = "fkozmik";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
-    shell = pkgs.zsh;
-    packages = with pkgs; [
-      _1password-gui
-      citrix_workspace
-      docker
-      fastfetch
-      firefox
-      git 
-      glibc
-      gnome.gnome-tweaks
-      gparted
-      jetbrains.phpstorm
-      libreoffice
-      logseq
-      mattermost-desktop
-      nix-direnv
-      nmon
-      oh-my-zsh
-      openssl
-      pika-backup
-      php
-      spotify
-      tailscale
-      tmux
-      yubikey-manager-qt ## I know, not alphabetically in order -_-
-      (vscode-with-extensions.override {
-        vscode = vscodium;
-        vscodeExtensions = with vscode-extensions; [
-          bbenoist.nix
-          ms-azuretools.vscode-docker
-          ms-python.python
-          ms-vscode-remote.remote-ssh
-        ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-          {
-            name = "Ansible";
-            publisher = "redhat";
-            version = "24.8.3";
-            sha256 = "8DlOB3bog/VeW5YAU2DQhlkvCf+3JqVJNbPJJJWYjI4=";
-          }
-          {
-            name = "theme-dracula";
-            publisher = "dracula-theme";
-            version = "2.25.0";
-            sha256 = "02aTnAvUJ/uCMNtjoCSQDlqwq5TwMwsEqWf/XRYnzT8=";
-          }
-          {
-            name = "git-graph";
-            publisher = "mhutchie";
-            version = "1.30.0";
-            sha256 = "sHeaMMr5hmQ0kAFZxxMiRk6f0mfjkg2XMnA4Gf+DHwA=";
-          } 
-          {
-            name = "mac-vim-ron";
-            publisher = "Dashiell";
-            version = "0.0.1";
-            sha256 = "WCh9Kam2McWmx668or6hD2ZwhzgikB6OXPKnZRDHRt0=";
-          } 
-          {
-            name = "nix-env-selector";
-            publisher = "arrterian";
-            version = "1.0.11";
-            sha256 = "74ad1a207f2d906ffd5066e534ed16c31240041104284cb89d2988c1d0e97f84";
-          }
-          {
-            name = "vscode-workspace-explorer";
-            publisher = "tomsaunders";
-            version = "1.5.0";
-            sha256 = "E7QVsUTLc3PP+xztFZlv5vUYpMR8ds+0VRZkg0Y6dAA=";
-          }
-          {
-            name = "vscode-yaml";
-            publisher = "redhat";
-            version = "1.15.0";
-            sha256 = "NhlLNYJryKKRv+qPWOj96pT2wfkiQeqEip27rzl2C0M=";
-          }
-        ];
-      })
-    ]; 
+  virtualisation = {
+    docker.enable = true;
+    libvirtd.enable = true;
   };
 
   fonts = {
@@ -205,10 +129,6 @@
     ];
   };
 
-  environment.systemPackages = with pkgs; [
-    vim
-  ];
-
   services = {
     openssh = {
       enable = true;
@@ -222,6 +142,7 @@
   };
 
   nix = {
+    settings.auto-optimise-store = true;
     gc = {
       automatic = true;
       dates = "weekly";
