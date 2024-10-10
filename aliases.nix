@@ -19,8 +19,12 @@
 
     alias gogit="cd ~/Documents/git/ && ls"
 
-    alias godev="cd ~/tuleap && git pull && git reset --hard HEAD && nix-shell"
-
+    function godev {
+          cd ~/tuleap
+          git pull
+          git reset --hard HEAD
+          nix-shell
+    }
 
     function logseq-commit {
         cd ~/Documents/git/Logseq
