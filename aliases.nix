@@ -3,6 +3,7 @@
     alias gs='git status'
     alias gd='git diff'
     alias gl='git log --oneline'
+    alias gpf='git push --force-with-lease'
 
     function rebase {
         git fetch upstream
