@@ -65,6 +65,10 @@
   };
 
   programs = {
+    _1password-gui = {
+      enable =  true;
+      polkitPolicyOwners = [ "fkozmik" ];
+    };
     direnv = {
       enable = true;
       loadInNixShell = true;
