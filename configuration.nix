@@ -1,12 +1,11 @@
 { config, pkgs, ... }:
-
 {
   imports =
     [ ## Includes : 
       ./aliases.nix
       ./hardware-configuration.nix
       ./networking-clients.nix
-      ./system-packages.nix
+      ./editors.nix
       ./users.nix
     ];
 
@@ -17,12 +16,20 @@
       efi.canTouchEfiVariables = true;
     };
   };
+  console.keyMap = "fr";
 
-  networking.hostName = "skill-issue"; 
-  networking.networkmanager.enable = true;
+  fonts = {
+    packages = with pkgs; [
+      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    ];
+    fontconfig = {
+      defaultFonts = {
+        monospace = [ "JetBrainsMono" ];
+      };
+    };
+  };
 
-  time.timeZone = "Europe/Paris";
-
+  hardware.pulseaudio.enable = false;
 
   i18n = {
     defaultLocale = "fr_FR.UTF-8";
@@ -39,120 +46,12 @@
     };
   };
 
-  ## Gnome, X11 and Keymap
-  services.xserver = {
-    enable = true;
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
-    xkb = {
-      layout = "fr";
-      variant = "azerty";
-    };
+  networking = {
+    hostName = "skill-issue"; 
+    networkmanager.enable = true;
   };
 
-  console.keyMap = "fr";
-
-  services.printing.enable = true;
-
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
-
-  programs = {
-    _1password-gui = {
-      enable =  true;
-      polkitPolicyOwners = [ "fkozmik" ];
-    };
-    direnv = {
-      enable = true;
-      loadInNixShell = true;
-      nix-direnv.enable = true;
-      };
-    fish = {
-      enable = false;
-    };
-    vim.defaultEditor = true;
-    virt-manager.enable = true;
-    zsh = {
-      enable = true;
-      enableCompletion = true;
-      autosuggestions.enable = true; 
-      syntaxHighlighting.enable = true;
-      ohMyZsh = {
-        enable = true;
-        theme = "agnoster";
-        plugins = [
-          "sudo"
-          "systemadmin"
-          "vi-mode"
-        ];
-      };
-    };
-  };
-
-  virtualisation = {
-    docker.enable = true;
-    libvirtd.enable = true;
-  };
-
-  fonts = {
-    packages = with pkgs; [
-      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-    ];
-    fontconfig = {
-      defaultFonts = {
-        monospace = [ "JetBrainsMono" ];
-      };
-    };
-  };
-
-  security.sudo.extraRules = [
-    { groups = [ "sudo" ]; commands = [ "ALL" ]; }
-    { users = [ "fkozmik" ];
-      commands = [ 
-      { 
-        command = "/etc/profiles/per-user/fkozmik/bin/docker"; 
-        options = [ "SETENV" "NOPASSWD" ]; 
-      } 
-      ]; 
-    }
-  ];
-
-  # Allow unfree packages
-  # nixpkgs.config.allowUnfree = true ### Doesn't work after bump to 24.05 
-  nixpkgs.config = {
-    allowUnfreePredicate = (pkg: true);
-    permittedInsecurePackages = [
-      "electron-27.3.11"
-    ];
-  };
-
-  services = {
-    openssh = {
-      enable = true;
-      settings.PasswordAuthentication = false;
-      #settings.PermitRootLogin = "yes";
-    };
-    tailscale = {
-      enable = true;
-      useRoutingFeatures = "client";
-    };
-  };
-
-  nix = {
-    settings.auto-optimise-store = true;
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 7d";
-    };
-  };
+  time.timeZone = "Europe/Paris";
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
