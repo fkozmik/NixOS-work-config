@@ -1,7 +1,10 @@
 { config, pkgs, ... }:
 {
   nix = {
-    settings.auto-optimise-store = true;
+    settings = {
+      auto-optimise-store = true;
+      experimental-features = [ "nix-command" "flakes" ];
+    };
     gc = {
       automatic = true;
       dates = "weekly";
@@ -69,7 +72,6 @@
     xserver = {
       enable = true;
       displayManager.gdm.enable = true;
-      desktopManager.gnome.enable = true;
       xkb = {
         layout = "fr";
         variant = "azerty";
