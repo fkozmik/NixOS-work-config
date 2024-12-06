@@ -29,22 +29,17 @@
       firefox
       git 
       glibc
-      gnome-extension-manager
-      gnome-menus
-      gnome-tweaks
-      gnomeExtensions.dash-to-dock
-      gnomeExtensions.arcmenu
       google-chrome
       jetbrains.phpstorm
       jetbrains-toolbox
       libreoffice
       logseq
-      mattermost-desktop
       nmon
       neovim
       oh-my-zsh
       openssl
       php
+      pika-backup
       powerline-fonts
       qemu_full
       spotify

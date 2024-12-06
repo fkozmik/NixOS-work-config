@@ -6,6 +6,7 @@
     alias gl='git log --oneline'
     alias gpf='git push --force-with-lease'
     alias gogit="cd ~/Documents/git/ && ls"
+    alias idem="sudo cp -r ~/Documents/git/NixOS-work-config/* /etc/nixos"
     alias accesscreator="~/vault-tuleap-dynamic-creds-helper.phar --lease-ttl-increment=2h"
     alias login="evlogin && vault token renew -increment=2h"
 

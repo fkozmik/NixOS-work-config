@@ -1,8 +1,11 @@
+[![built with nix](https://img.shields.io/static/v1?logo=nixos&logoColor=white&label=&message=Built%20with%20Nix&color=41439a)](https://builtwithnix.org)
+
 # My NixOS work configuration
 
 Here are my NixOS config files.  
 Applying KISS principle.
 
+**Note**: I am actually preparing to use the Cosmic DE Alpha, a bit more modularity is coming up
 
 **Highlights**:
 
