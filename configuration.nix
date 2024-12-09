@@ -1,10 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 {
   imports =
     [ ## Includes : 
       ./Base
       ./Users
-      ./_nixos-work-hidden
+      /home/fkozmik/_nixos-work-hidden
     ];
 
   boot = {
