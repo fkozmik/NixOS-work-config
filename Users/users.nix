@@ -47,6 +47,7 @@
       thefuck
       tmux
       virt-manager
+      wireshark
       yubikey-manager-qt
     ]; 
   };

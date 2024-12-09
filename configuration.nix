@@ -4,6 +4,7 @@
     [ ## Includes : 
       ./Base
       ./Users
+      ./_nixos-work-hidden
     ];
 
   boot = {
@@ -13,6 +14,7 @@
       efi.canTouchEfiVariables = true;
     };
   };
+
   console.keyMap = "fr";
 
   fonts = {

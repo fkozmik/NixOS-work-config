@@ -28,6 +28,6 @@
     ];
 
  # Cosmic services Note: you must enable the Cosmic Cache flake.nix and flake.lock located here: https://github.com/lilyinstarlight/nixos-cosmic
-#  services.desktopManager.cosmic.enable = true;
-#  services.displayManager.cosmic-greeter.enable = true;
+ services.desktopManager.cosmic.enable = true;
+ services.displayManager.cosmic-greeter.enable = true;
 }

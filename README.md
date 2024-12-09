@@ -5,11 +5,11 @@
 Here are my NixOS config files.  
 Applying KISS principle.
 
-**Note**: I am actually preparing to use the Cosmic DE Alpha, a bit more modularity is coming up
+**Note**: I am actually preparing to use the Cosmic DE Alpha 4, a bit more modularity is coming up
 
 **Highlights**:
 
-- Only **one configuration** : The one that lets me work.
+- Only **one configuration** (Should I count DEs ?) : The one that lets me work.
 - **Encrypted** single **ext4** partition
 - Fully **declarative** **self-hosted** stuff
 
@@ -19,6 +19,7 @@ Applying KISS principle.
 - `configuration.nix`: Entrypoint, basic configs such as keymaps, fonts or networking variables; whatever configuration that is vowed to stay as it is.
 - `Base`: Folder containing a tad more advanced configurations depending on what I like ATM *¯\\_(ツ)_/¯*.
   - `base.nix`: Mostly Nix Options with programs and services.
+  - `${DesktopEnvironment}.nix`: GUI confs
   - `hardware-configuration.nix`: The auto-generated conf-file (Git Ignored).
 - `Users`: Folder containing personal configurations.
   - `aliases.nix`: The name should tell you exactly what it does ^^
@@ -30,7 +31,8 @@ Applying KISS principle.
 
 Most relevant user apps daily drivers:
 
-- Gnome 47
+- Cosmic Alpha 4
+- Gnome 47 (Keeping it ATM, so I can keep working if Cosmic's DE Fails)
 - vim and VScodium (with proprietary extensions)
 - zsh
 - Basic `Console` emulator from Gnome - I's good enough for me
