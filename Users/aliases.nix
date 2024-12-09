@@ -10,6 +10,8 @@
     alias accesscreator="~/vault-tuleap-dynamic-creds-helper.phar --lease-ttl-increment=2h"
     alias login="evlogin && vault token renew -increment=2h"
 
+    alias rebuild="sudo nixos-rebuild switch --impure"
+
     function rebase {
         git fetch upstream
         git checkout main

@@ -45,9 +45,9 @@
       spotify
       tailscale
       thefuck
+      tree
       tmux
       virt-manager
-      wireshark
       yubikey-manager-qt
     ]; 
   };
