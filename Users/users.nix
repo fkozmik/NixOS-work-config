@@ -35,7 +35,6 @@
       libreoffice
       logseq
       nmon
-      neovim
       oh-my-zsh
       openssl
       php
