@@ -39,7 +39,6 @@
       oh-my-zsh
       openssl
       php
-      pika-backup
       powerline-fonts
       qemu_full
       spotify
@@ -48,6 +47,7 @@
       tree
       tmux
       virt-manager
+      xournalpp
       yubikey-manager-qt
     ]; 
   };
