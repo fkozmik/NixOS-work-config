@@ -1,13 +1,11 @@
 {
   inputs = {
-    nixpkgs.follows = "nixos-cosmic/nixpkgs-stable"; # NOTE: change "nixpkgs" to "nixpkgs-stable" to use stable NixOS release
-
+    nixpkgs.follows = "nixos-cosmic/nixpkgs-stable";
     nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
   };
 
   outputs = { self, nixpkgs, nixos-cosmic }: {
     nixosConfigurations = {
-      # NOTE: change "host" to your system's hostname
       skill-issue = nixpkgs.lib.nixosSystem {
         modules = [
           {
