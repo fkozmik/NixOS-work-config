@@ -45,8 +45,3 @@ Most relevant user apps daily drivers:
 - docker
 - thefuck, you know what I mean...
 - and NixOS (Special thanks to you !)
-
-## Incoming Changes
-
-Most relevant change incoming is basing most of my conf in a Flake or modularize it 
-*just* enough to keep this repo working on my work Macbook Pro as well.
