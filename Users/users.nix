@@ -31,6 +31,7 @@
       glibc
       google-chrome
       jetbrains.phpstorm
+      jetbrains.toolbox
       libreoffice
       logseq
       nmon
