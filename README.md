@@ -16,19 +16,38 @@ Applying KISS principle.
 
 ## Structure
 
-- `configuration.nix`: Entrypoint, basic configs such as keymaps, fonts or networking variables; whatever configuration that is vowed to stay as it is.
-- `flake.nix`: Only the Cosmic DE Flake ATM.
-- `flake.lock`: //
-- `Base`: Folder containing a tad more advanced configurations depending on what I like ATM *¯\\_(ツ)_/¯*.
-  - `base.nix`: Mostly Nix Options with programs and services.
-  - `${DesktopEnvironment}.nix`: GUI confs
+### Tree 
+
+```tree
+.
+├── backup
+├── Base
+│   ├── base.nix
+│   ├── cosmic.nix
+│   ├── default.nix
+│   └── gnome.nix
+├── cachix
+│   └── cosmic.nix
+├── cachix.nix
+├── configuration.nix
+├── flake.lock
+├── flake.nix
+├── README.md
+└── Users
+    ├── aliases.nix
+    ├── default.nix
+    ├── editors.nix
+    └── users.nix
+```
+
+### Baseline
+
+- `configuration.nix`: Entrypoint
+- `flake.nix`: Only the Cosmic DE build ATM.
+- `Base`: Folder containing DEs and configurations subject to change
 - `Users`: Folder containing personal configurations.
-  - `aliases.nix`: The name should tell you exactly what it does ^^
-  - `editors.nix`: Where I'll define my editors (Vim and VScodium) and their extensions (if any).
-  - `users.nix`: I am alone there but I need to define the packages and the security options I need somewhere, right ? 
 - `_nixos-work-hidden`: Using a private repo, as GitIgnored files aren't symlinked into the store while using Flakes.
-  - `hardware-configuration.nix`: The auto-generated conf-file.
-  - `networking-clients.nix`: Basically my `/etc/hosts`.
+
 
 ## Tooling and applications I use
 
