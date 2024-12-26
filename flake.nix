@@ -15,6 +15,7 @@
             };
           }
           nixos-cosmic.nixosModules.default
+          ./cachix.nix
           ./configuration.nix
         ];
       };
