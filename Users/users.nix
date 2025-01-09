@@ -30,8 +30,6 @@
       git 
       glibc
       google-chrome
-      jetbrains.phpstorm
-      jetbrains.toolbox
       libreoffice
       logseq
       nmon
@@ -43,8 +41,8 @@
       spotify
       tailscale
       thefuck
-      tree
       tmux
+      tree
       virt-manager
       xournalpp
       yubikey-manager-qt
