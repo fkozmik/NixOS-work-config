@@ -9,6 +9,7 @@
     alias goinfra="cd ~/Documents/git/enalean-infrastructure" 
     alias accesscreator="~/vault-tuleap-dynamic-creds-helper.phar --lease-ttl-increment=2h"
     alias login="evlogin && vault token renew -increment=2h"
+    alias check="nix-shell --command 'make {editorconfig-checker,ansible-lint,tflint}'"
 
     alias rebuild="sudo nixos-rebuild switch --impure"
 
