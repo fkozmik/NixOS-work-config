@@ -14,23 +14,23 @@
     alias rebuild="sudo nixos-rebuild switch --impure"
 
     function rebase {
-        git fetch upstream
-        git checkout main
-        git rebase upstream/main
-        git push --force-with-lease origin main
+      git fetch upstream
+      git checkout main
+      git rebase upstream/main
+      git push --force-with-lease origin main
     }
 
     function enassh {
-            cd ~/Documents/git/enalean-infrastructure
-            rebase
-            nix-shell --command "evlogin; poetry shell; return"
+        cd ~/Documents/git/enalean-infrastructure
+        rebase
+        nix-shell --command "evlogin; poetry shell; return"
     }
 
     function godev {
-          cd ~/tuleap
-          git pull
-          git reset --hard HEAD
-          nix-shell
+        cd ~/tuleap
+        git pull
+        git reset --hard HEAD
+        nix-shell
     }
 
     function logseq-commit {
@@ -40,8 +40,8 @@
     }
 
     function logseq-push {
-            logseq-commit
-            git push origin main
+          logseq-commit
+          git push origin main
     }
 
   '';

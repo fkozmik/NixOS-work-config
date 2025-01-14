@@ -2,8 +2,8 @@
 {
   imports =
     [ ## Includes : 
-      ./Base
       ./cachix.nix
+      ./Base
       ./Users
       /home/fkozmik/_nixos-work-hidden
     ];
