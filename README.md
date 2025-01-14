@@ -9,7 +9,7 @@ Applying KISS principle.
 
 **Highlights**:
 
-- Only **one configuration** (Should I count DEs ?) : The one that lets me work.
+- Only **one configuration** : The one that lets me work.
 - **Encrypted** single **ext4** partition
 - Fully **declarative** **self-hosted** stuff
 
@@ -53,11 +53,10 @@ Applying KISS principle.
 
 Most relevant user apps daily drivers:
 
-- Cosmic Alpha 4
-- Gnome 47 (Keeping it ATM, so I can keep working if Cosmic's DE Fails)
+- Cosmic Alpha 5 (Gnome 47 as backup)
 - vim and VScodium (with proprietary extensions)
 - zsh
-- Basic `Console` emulator from Gnome (or Cosmic FWIW) - It's good enough for me
+- Basic `Console` emulator from Cosmic - It's good enough for me
 - chrome, for the Google Workspace integration, Tab grouping...
 - fastfetch
 - tailscale
