@@ -8,14 +8,6 @@
       /home/fkozmik/_nixos-work-hidden
     ];
 
-  boot = {
-    initrd.luks.devices."luks-35fbd3ab-af90-4560-a519-0a3b342c0694".device = "/dev/disk/by-uuid/35fbd3ab-af90-4560-a519-0a3b342c0694";
-    loader = {
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
-    };
-  };
-
   console.keyMap = "fr";
 
   fonts = {
