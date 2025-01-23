@@ -24,11 +24,6 @@
       enable =  true;
       polkitPolicyOwners = [ "fkozmik" ];
     };
-    direnv = {
-      enable = true;
-      loadInNixShell = true;
-      nix-direnv.enable = true;
-      };
     thefuck.enable = true;
     vim = {
       defaultEditor = true;
