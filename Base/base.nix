@@ -19,6 +19,8 @@
     ];
   };
 
+  powerManagement.powertop.enable = true;
+
   programs = {
     _1password-gui = {
       enable =  true;
@@ -59,11 +61,22 @@
       alsa.support32Bit = true;
       pulse.enable = true;
     };
+    power-profiles-daemon.enable = false;
     printing.enable = true;
     tailscale = {
       enable = true;
       useRoutingFeatures = "client";
     };
+    tlp = {
+      enable = true;
+      settings = {
+        CPU_BOOST_ON_AC = 1;
+        CPU_BOOST_ON_BAT = 0;
+        CPU_SCALING_GOVERNOR_ON_AC = "performance";
+        CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+        };
+    };
+    system76-scheduler.settings.cfsProfiles.enable = true;
     xserver = {
       enable = true;
       displayManager.gdm.enable = true;
