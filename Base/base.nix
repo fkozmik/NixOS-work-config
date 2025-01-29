@@ -41,8 +41,11 @@
         enable = true;
         theme = "agnoster";
         plugins = [
+          "docker-compose"
+          "git"
           "sudo"
           "systemadmin"
+          "tailscale"
           "vi-mode"
         ];
       };

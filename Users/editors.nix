@@ -2,7 +2,6 @@
 {
     environment.systemPackages = with pkgs; [
     jetbrains.phpstorm
-    jetbrains-toolbox
     vim
     (vscode-with-extensions.override {
         vscode = vscodium;
