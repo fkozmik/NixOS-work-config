@@ -20,8 +20,8 @@
           {
             name = "theme-dracula";
             publisher = "dracula-theme";
-            version = "2.25.0";
-            sha256 = "02aTnAvUJ/uCMNtjoCSQDlqwq5TwMwsEqWf/XRYnzT8=";
+            version = "2.25.1";
+            sha256 = "ijGbdiqbDQmZYVqZCx2X4W7KRNV3UDddWvz+9x/vfcA=";
           }
           {
             name = "git-graph";
