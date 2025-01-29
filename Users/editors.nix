@@ -14,8 +14,8 @@
           {
             name = "Ansible";
             publisher = "redhat";
-            version = "24.8.3";
-            sha256 = "8DlOB3bog/VeW5YAU2DQhlkvCf+3JqVJNbPJJJWYjI4=";
+            version = "25.1.0";
+            sha256 = "/kLg+msRu6GvkENVu3jw9uDbfEo/x0eZgsKfXvLaO3I=";
           }
           {
             name = "theme-dracula";
