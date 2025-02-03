@@ -19,7 +19,7 @@
     ];
   };
 
-  powerManagement.powertop.enable = true;
+  powerManagement.powertop.enable = true; # Battery management
 
   programs = {
     _1password-gui = {
@@ -43,9 +43,9 @@
         plugins = [
           "docker-compose"
           "git"
-          "sudo"
           "systemadmin"
           "tailscale"
+          "thefuck"
           "vi-mode"
         ];
       };
@@ -64,22 +64,22 @@
       alsa.support32Bit = true;
       pulse.enable = true;
     };
-    power-profiles-daemon.enable = false;
+    power-profiles-daemon.enable = false; # Battery management
     printing.enable = true;
     tailscale = {
       enable = true;
       useRoutingFeatures = "client";
     };
-    tlp = {
+    tlp = { # Battery management
       enable = true;
       settings = {
         CPU_BOOST_ON_AC = 1;
         CPU_BOOST_ON_BAT = 0;
         CPU_SCALING_GOVERNOR_ON_AC = "performance";
         CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-        };
+      };
     };
-    system76-scheduler.settings.cfsProfiles.enable = true;
+    system76-scheduler.settings.cfsProfiles.enable = true; # Battery management, thanks system76 !
     xserver = {
       enable = true;
       displayManager.gdm.enable = true;

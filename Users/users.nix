@@ -2,7 +2,7 @@
 {
   security = {
     rtkit.enable = true;
-    sudo.extraRules = [
+    sudo.extraRules = [ # Allow all docker commands without password
       { groups = [ "sudo" ]; commands = [ "ALL" ]; }
       { users = [ "fkozmik" ];
         commands = [ 

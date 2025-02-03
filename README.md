@@ -21,8 +21,7 @@ Applying KISS principle.
 ```tree
 .
 ├── backup
-├── Base
-│   ├── base.nix
+├── DesktopEnvironments
 │   ├── cosmic.nix
 │   ├── default.nix
 │   └── gnome.nix
@@ -35,6 +34,7 @@ Applying KISS principle.
 ├── README.md
 └── Users
     ├── aliases.nix
+    ├── base.nix
     ├── default.nix
     ├── editors.nix
     └── users.nix
