@@ -10,7 +10,7 @@
           command = "/etc/profiles/per-user/fkozmik/bin/docker"; 
           options = [ "SETENV" "NOPASSWD" ]; 
         } 
-        ]; 
+        ];
       }
     ];
   };
@@ -27,7 +27,10 @@
       fastfetch
       ffmpeg
       firefox
-      git 
+      git
+      gitcs
+      gitg
+      gti
       glibc
       google-chrome
       libreoffice
