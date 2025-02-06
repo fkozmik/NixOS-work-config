@@ -5,7 +5,7 @@
 Here are my NixOS config files.  
 Applying KISS principle.
 
-**Note**: I am currently testing the Cosmic DE Alpha 4.
+**Note**: I am currently testing the Cosmic DE Alpha 5.
 
 **Highlights**:
 
@@ -44,7 +44,7 @@ Applying KISS principle.
 
 - `configuration.nix`: Entrypoint
 - `flake.nix`: Only the Cosmic DE build ATM.
-- `Base`: Folder containing DEs and configurations subject to change
+- `DesktopEnvironments`: Folder containing DEs.
 - `Users`: Folder containing personal configurations.
 - `_nixos-work-hidden`: Using a private repo, as GitIgnored files aren't symlinked into the store while using Flakes.
 
