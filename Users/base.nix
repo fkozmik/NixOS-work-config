@@ -42,7 +42,6 @@
         theme = "agnoster";
         plugins = [
           "docker-compose"
-          "git"
           "systemadmin"
           "tailscale"
           "thefuck"
