@@ -38,6 +38,7 @@
       nmon
       oh-my-zsh
       openssl
+      p7zip
       php
       powerline-fonts
       qemu_full
