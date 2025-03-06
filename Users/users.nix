@@ -21,7 +21,6 @@
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
-      # _1password-gui
       baobab
       citrix_workspace
       docker

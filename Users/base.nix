@@ -42,9 +42,9 @@
         theme = "agnoster";
         plugins = [
           "docker-compose"
+          "sudo"
           "systemadmin"
           "tailscale"
-          "thefuck"
           "vi-mode"
         ];
       };
