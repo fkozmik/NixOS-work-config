@@ -5,7 +5,7 @@
 Here are my NixOS config files.  
 Applying KISS principle.
 
-**Note**: I am currently testing the Cosmic DE Alpha 5.
+**Note**: I am currently testing the Cosmic DE Alpha 6.
 
 **Highlights**:
 
@@ -53,7 +53,7 @@ Applying KISS principle.
 
 Most relevant user apps daily drivers:
 
-- Cosmic Alpha 5 (Gnome 47 as backup)
+- Cosmic Alpha (Gnome 47 as backup)
 - vim and VScodium (with proprietary extensions)
 - zsh
 - Basic `Console` emulator from Cosmic - It's good enough for me
