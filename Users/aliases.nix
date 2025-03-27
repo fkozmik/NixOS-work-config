@@ -29,7 +29,7 @@
           git pull && git reset --hard HEAD
           nix-shell
         elif [ "$1" = "infra" ]; then 
-          cd ~/Documents/git/enalean-infrastructure && nix-shell 
+          cd ~/Documents/git/enalean-infrastructure && nix-shell --command "login; return"
         elif [ "$1" = "git" ]; then
           cd ~/Documents/git/ && ls
         elif [ "$1" = "tools" ]; then
