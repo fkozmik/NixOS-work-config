@@ -29,7 +29,13 @@
           publisher = "mhutchie";
           version = "1.30.0";
           sha256 = "sHeaMMr5hmQ0kAFZxxMiRk6f0mfjkg2XMnA4Gf+DHwA=";
-        } 
+        }
+        {
+          name = "jinja";
+          publisher = "wholroyd";
+          version = "0.0.8";
+          sha256 = "kU2uMIBChHOE76npA9u1CSJCMPHK0hj/2vasVTx9ydI=";
+        }
         {
           name = "mac-vim-ron";
           publisher = "Dashiell";
