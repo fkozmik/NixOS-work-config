@@ -2,7 +2,7 @@
 {
   security = {
     rtkit.enable = true;
-    sudo.extraRules = [ # Allow all docker commands without password
+    sudo.extraRules = [
       { groups = [ "sudo" ]; commands = [ "ALL" ]; }
       { users = [ "fkozmik" ];
         commands = [ 
@@ -10,6 +10,10 @@
           command = "/etc/profiles/per-user/fkozmik/bin/docker"; 
           options = [ "SETENV" "NOPASSWD" ]; 
         } 
+        {
+          command = "/run/current-system/sw/bin/systemctl restart bluetooth";
+          options = [ "SETENV" "NOPASSWD" ];
+        }
         ];
       }
     ];
