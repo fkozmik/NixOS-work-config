@@ -42,6 +42,8 @@
     hostName = "skill-issue"; 
     networkmanager.enable = true;
   };
+  
+  nix.nixPath = [ "nixos-config=/home/fkozmik/NixOS-work-config/configuration.nix" ];
 
   time.timeZone = "Europe/Paris";
 
