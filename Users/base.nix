@@ -90,7 +90,10 @@
   };
 
   virtualisation = {
-    docker.enable = true;
+    docker = {
+      enable = true;
+      storageDriver = "overlay2";
+    };
     libvirtd.enable = true;
   };
 }
