@@ -47,6 +47,7 @@
       powerline-fonts
       qemu_full
       spotify
+      spotify-player
       tailscale
       thefuck
       tmux
