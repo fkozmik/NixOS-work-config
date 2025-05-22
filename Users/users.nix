@@ -26,7 +26,6 @@
     shell = pkgs.zsh;
     packages = with pkgs; [
       baobab
-      citrix_workspace
       docker
       fastfetch
       ffmpeg
