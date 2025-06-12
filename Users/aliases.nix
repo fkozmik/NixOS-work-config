@@ -17,12 +17,6 @@
       git push --force-with-lease origin main
     }
 
-    function enassh {
-        cd ~/Documents/git/enalean-infrastructure
-        rebase
-        nix-shell --command "evlogin; poetry shell; return"
-    }
-
     function go {
         if [ "$1" = "dev" ]; then 
           cd ~/tuleap
@@ -35,7 +29,7 @@
         elif [ "$1" = "tools" ]; then
           cd ~/Toolbox/ && ls
         else
-          echo -e "Unknown path \nKnown routes are 'infra', 'dev', 'git', 'tools'"
+          echo -e "Unknown path. \nKnown routes are 'infra', 'dev', 'git', 'tools'"
         fi
     }
 
