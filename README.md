@@ -5,7 +5,7 @@
 Here are my NixOS config files.  
 Applying KISS principle.
 
-**Note**: I am currently testing the Cosmic DE Alpha 6.
+**Note**: I am currently testing the Cosmic DE Alpha.
 
 **Highlights**:
 
@@ -35,6 +35,7 @@ Applying KISS principle.
 └── Users
     ├── aliases.nix
     ├── base.nix
+    ├── battery-management.nix
     ├── default.nix
     ├── editors.nix
     └── users.nix
