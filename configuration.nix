@@ -46,6 +46,7 @@
   };
   
   nix.nixPath = [ "nixos-config=/home/fkozmik/NixOS-work-config/configuration.nix" ];
+  nix.package = pkgs.nixVersions.nix_2_28;
 
   time.timeZone = "Europe/Paris";
 
