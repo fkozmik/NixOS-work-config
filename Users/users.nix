@@ -30,10 +30,7 @@
       fastfetch
       ffmpeg
       firefox
-      git
-      gitcs
-      gitg
-      gti
+      gitFull
       glibc
       google-chrome
       libreoffice
