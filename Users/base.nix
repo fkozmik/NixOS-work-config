@@ -84,6 +84,7 @@
       pulse.enable = true;
     };
     printing.enable = true;
+    pulseaudio.enable = false;
     tailscale = {
       enable = true;
       useRoutingFeatures = "client";

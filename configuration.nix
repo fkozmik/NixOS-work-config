@@ -23,8 +23,6 @@
     };
   };
 
-  hardware.pulseaudio.enable = false;
-
   i18n = {
     defaultLocale = "fr_FR.UTF-8";
     extraLocaleSettings = {
