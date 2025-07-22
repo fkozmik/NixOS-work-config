@@ -2,7 +2,6 @@
 {
   imports =
     [ ## Includes : 
-      ./cachix.nix
       ./DesktopEnvironments
       ./Users
       /home/fkozmik/_nixos-work-hidden

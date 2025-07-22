@@ -25,9 +25,6 @@ Applying KISS principle.
 │   ├── cosmic.nix
 │   ├── default.nix
 │   └── gnome.nix
-├── cachix
-│   └── cosmic.nix
-├── cachix.nix
 ├── configuration.nix
 ├── flake.lock
 ├── flake.nix
