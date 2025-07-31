@@ -21,8 +21,6 @@
     ];
   };
 
-  powerManagement.powertop.enable = true; # Battery management
-
   programs = {
     _1password-gui = {
       enable =  true;
