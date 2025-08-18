@@ -53,7 +53,8 @@
       syntaxHighlighting.enable = true;
       ohMyZsh = {
         enable = true;
-        theme = "agnoster";
+        theme = "jonathan";
+        # theme = "agnoster";
         plugins = [
           "docker-compose"
           "sudo"
