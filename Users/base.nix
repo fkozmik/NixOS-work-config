@@ -72,6 +72,7 @@
       nssmdns4 = true;
       openFirewall = true;
     };
+    fprintd.enable = true;
     openssh = {
       enable = true;
       settings.PasswordAuthentication = false;

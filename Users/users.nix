@@ -30,6 +30,7 @@
       fastfetch
       ffmpeg
       firefox
+      fprintd
       gitFull
       glibc
       google-chrome
