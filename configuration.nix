@@ -1,26 +1,19 @@
 { config, pkgs, lib, ... }:
-{
+let
+  folder = ./roles;
+  nixFiles = lib.filterAttrs 
+    (name: type: type == "regular" && lib.hasSuffix ".nix" name) 
+    (builtins.readDir folder);
+  rolesImport = lib.mapAttrsToList (name: _: folder + ("/" + name)) nixFiles;
+in {
+
+  # inherit imports;
   imports =
     [ ## Includes : 
-      ./DesktopEnvironments
-      ./Users
       /home/fkozmik/_nixos-work-hidden
-    ];
+    ]++ rolesImport;
 
   console.keyMap = "fr";
-
-  fonts = {
-    packages = with pkgs; [
-      nerd-fonts.fira-code
-      nerd-fonts.droid-sans-mono
-      nerd-fonts.jetbrains-mono
-    ];
-    fontconfig = {
-      defaultFonts = {
-        monospace = [ "JetBrainsMono" ];
-      };
-    };
-  };
 
   i18n = {
     defaultLocale = "fr_FR.UTF-8";
@@ -42,9 +35,37 @@
     networkmanager.enable = true;
   };
   
-  nix.nixPath = [ "nixos-config=/home/fkozmik/NixOS-work-config/configuration.nix" ];
+  nix = {
+    nixPath = [ "nixos-config=/home/fkozmik/NixOS-work-config/configuration.nix" ];
+    package = pkgs.nixVersions.nix_2_28;
+    settings = {
+      auto-optimise-store = true;
+      experimental-features = [ "nix-command" "flakes" ];
+    };
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
+  };
+
+  nixpkgs.config = {
+    allowUnfreePredicate = (pkg: true);
+    permittedInsecurePackages = [
+      "electron-27.3.11"
+      "yubikey-manager-qt-1.2.5"
+    ];
+  };
 
   time.timeZone = "Europe/Paris";
+
+  virtualisation = {
+    docker = {
+      enable = true;
+      storageDriver = "overlay2";
+    };
+    libvirtd.enable = true;
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

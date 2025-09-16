@@ -23,9 +23,9 @@
           git pull && git reset --hard HEAD
           nix-shell
         elif [ "$1" = "infra" ]; then 
-          cd ~/Documents/git/enalean-infrastructure && nix-shell --command "login; return"
+          cd ~/Workspace/enalean-infrastructure && nix-shell --command "login; return"
         elif [ "$1" = "git" ]; then
-          cd ~/Documents/git/ && ls
+          cd ~/Workspace/ && ls
         elif [ "$1" = "tools" ]; then
           cd ~/Toolbox/ && ls
         else
@@ -34,7 +34,7 @@
     }
 
     function logseq-commit {
-        cd ~/Documents/git/Logseq
+        cd ~/Workspace/Logseq
         git add . 
         git commit -m "`date +%H:%M`"
     }

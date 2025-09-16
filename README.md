@@ -21,20 +21,19 @@ Applying KISS principle.
 ```tree
 .
 ├── backup
-├── DesktopEnvironments
-│   ├── cosmic.nix
-│   ├── default.nix
-│   └── gnome.nix
 ├── configuration.nix
 ├── flake.lock
 ├── flake.nix
 ├── README.md
-└── Users
+└── roles
     ├── aliases.nix
-    ├── base.nix
     ├── battery-management.nix
-    ├── default.nix
+    ├── cosmic.nix
     ├── editors.nix
+    ├── fonts.nix
+    ├── gnome.nix
+    ├── programs.nix
+    ├── services.nix
     └── users.nix
 ```
 
