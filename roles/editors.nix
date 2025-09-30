@@ -43,6 +43,12 @@
           sha256 = "WCh9Kam2McWmx668or6hD2ZwhzgikB6OXPKnZRDHRt0=";
         } 
         {
+          name = "vim";
+          publisher = "vscodevim";
+          version = "1.30.1";
+          sha256 = "cKdVQTGj7R37YefQAaTspF1RVul/9wv7u9b5TpGZN5k=";
+        }
+        {
           name = "vscode-workspace-explorer";
           publisher = "tomsaunders";
           version = "1.5.0";
