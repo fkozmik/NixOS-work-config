@@ -23,13 +23,15 @@
           git pull && git reset --hard HEAD
           nix-shell
         elif [ "$1" = "infra" ]; then 
+          cd ~/Workspace/enalean-infrastructure && nix-shell
+        elif [ "$1" = "client" ]; then 
           cd ~/Workspace/enalean-infrastructure && nix-shell --command "login; return"
         elif [ "$1" = "git" ]; then
           cd ~/Workspace/ && ls
         elif [ "$1" = "tools" ]; then
           cd ~/Toolbox/ && ls
         else
-          echo -e "Unknown path. \nKnown routes are 'infra', 'dev', 'git', 'tools'"
+          echo -e "Unknown path. \nKnown routes are 'infra', 'client', 'dev', 'git', 'tools'"
         fi
     }
 
