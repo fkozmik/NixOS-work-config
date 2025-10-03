@@ -7,6 +7,11 @@
       openFirewall = true;
     };
     fprintd.enable = true;
+    logind = { 
+      lidSwitchDocked = "ignore";
+      powerKey = "lock";
+      powerKeyLongPress = "poweroff";
+    };
     openssh = {
       enable = true;
       settings.PasswordAuthentication = false;
