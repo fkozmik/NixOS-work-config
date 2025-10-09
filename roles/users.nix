@@ -25,6 +25,7 @@
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
+      adobe-reader
       baobab
       docker
       fastfetch
@@ -54,4 +55,14 @@
       yubikey-manager-qt
     ]; 
   };
+
+  nixpkgs.config = {
+    allowUnfreePredicate = (pkg: true);
+    permittedInsecurePackages = [
+      "adobe-reader-9.5.5"
+      "electron-27.3.11"
+      "yubikey-manager-qt-1.2.5"
+    ];
+  };
+
 }
