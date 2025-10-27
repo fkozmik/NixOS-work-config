@@ -7,6 +7,7 @@
       openFirewall = true;
     };
     fprintd.enable = true;
+    fwupd.enable = true;
     logind = { 
       lidSwitchDocked = "ignore";
       powerKey = "lock";

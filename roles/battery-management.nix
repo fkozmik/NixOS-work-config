@@ -11,6 +11,7 @@
                 CPU_SCALING_GOVERNOR_ON_AC = "performance";
                 CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
                 STOP_CHARGE_THRESH_BAT0 = 95;
+                START_CHARGE_THRESH_BAT0 = 25;
             };
         };
     system76-scheduler.settings.cfsProfiles.enable = true;
