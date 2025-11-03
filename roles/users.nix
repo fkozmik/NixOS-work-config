@@ -57,16 +57,27 @@
     ]; 
   };
  
-  systemd.services.logiops = {
-    description = "Logitech Configuration Daemon";
-    startLimitIntervalSec = 0;
-    after = [ "multi-user.target" ];
-    wantedBy = [ "graphical.target" ];
-    wants = [ "multi-user.target" ];
-    serviceConfig = {
-      Type = "simple";
-      ExecStart = "${pkgs.logiops}/bin/logid -v";
-      User = "root";
+  systemd.services = {
+    configure-sound-leds = rec {
+      wantedBy = [ "sound.target" ];
+      after = wantedBy;
+      serviceConfig.Type = "oneshot";
+      script = ''
+        echo follow-mute > /sys/class/sound/ctl-led/mic/mode
+        echo follow-mute > /sys/class/sound/ctl-led/speaker/mode
+      '';
+    };
+    logiops = {
+      description = "Logitech Configuration Daemon";
+      startLimitIntervalSec = 0;
+      after = [ "multi-user.target" ];
+      wantedBy = [ "graphical.target" ];
+      wants = [ "multi-user.target" ];
+      serviceConfig = {
+        Type = "simple";
+        ExecStart = "${pkgs.logiops}/bin/logid -v";
+        User = "root";
+      };
     };
   };
 
