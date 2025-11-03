@@ -22,7 +22,7 @@
   users.users.fkozmik = {
     isNormalUser = true;
     description = "fkozmik";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "scanner" "lp" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
       baobab
