@@ -31,6 +31,7 @@
       ffmpeg
       firefox
       fprintd
+      gh
       gitFull
       glibc
       google-chrome
