@@ -43,6 +43,7 @@
       openssl
       p7zip
       php
+#      plymouth
       powerline-fonts
       qemu_full
       spotify
