@@ -43,6 +43,12 @@
           sha256 = "WCh9Kam2McWmx668or6hD2ZwhzgikB6OXPKnZRDHRt0=";
         } 
         {
+          name = "material-palenight-theme";
+          publisher = "whizkydee";
+          version = "2.0.4";
+          sha256 = "FpYqzzeLLVRhClMiMxusBXwTaJnqZbmneRnFTkV9nm8=";
+        }
+        {
           name = "vim";
           publisher = "vscodevim";
           version = "1.30.1";
