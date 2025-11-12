@@ -8,7 +8,7 @@
     alias login="evlogin && vault token renew -increment=2h > /dev/null"
     alias check="nix-shell --command 'make {editorconfig-checker,ansible-lint,tflint,scan-secrets}'"
 
-    alias rebuild="sudo nixos-rebuild switch --impure --flake /home/fkozmik/NixOS-work-config/#skill-issue"
+    alias rebuild="sudo nixos-rebuild switch --impure --flake /home/fkozmik/NixOS-work-config/#skill-issue --show-trace"
 
     function rebase {
       git fetch upstream
