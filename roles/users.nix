@@ -37,6 +37,8 @@
       google-chrome
       libreoffice
       logseq
+      mattermost-desktop
+      nextcloud-client
       nmon
       oh-my-zsh
       openssl
@@ -49,6 +51,7 @@
       spotify-player
       tailscale
       thefuck
+      thunderbird
       tmux
       tree
       virt-manager
