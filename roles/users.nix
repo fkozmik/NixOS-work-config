@@ -51,7 +51,6 @@
       spotify-player
       tailscale
       thefuck
-      thunderbird
       tmux
       tree
       virt-manager
