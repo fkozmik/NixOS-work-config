@@ -5,7 +5,6 @@
         cosmic-term
         cosmic-edit
         cosmic-comp
-        cosmic-store
         cosmic-randr
         cosmic-panel
         cosmic-icons
