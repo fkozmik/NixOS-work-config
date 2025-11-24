@@ -22,7 +22,7 @@
   users.users.fkozmik = {
     isNormalUser = true;
     description = "fkozmik";
-    extraGroups = [ "networkmanager" "wheel" "docker" "scanner" "lp" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "scanner" "lp" "wireshark" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
       baobab
@@ -54,6 +54,7 @@
       tmux
       tree
       virt-manager
+      wireshark
       xournalpp
       yubikey-manager-qt
     ]; 

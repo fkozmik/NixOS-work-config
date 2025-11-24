@@ -25,6 +25,7 @@
       enable = true;
     };
     virt-manager.enable = true;
+    wireshark.enable = true;
     zsh = {
       enable = true;
       enableCompletion = true;
