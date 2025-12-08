@@ -26,6 +26,7 @@
     shell = pkgs.zsh;
     packages = with pkgs; [
       baobab
+      dive
       docker
       fastfetch
       ffmpeg
@@ -38,6 +39,7 @@
       libreoffice
       logseq
       mattermost-desktop
+      monitor
       nextcloud-client
       nmon
       oh-my-zsh
