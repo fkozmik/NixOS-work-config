@@ -19,10 +19,10 @@
           sha256 = "E/BogNtax4dkv6hlYcaRinTxr4jnVyV9hVCdkIkul9s=";
         }
         {
-          name = "theme-dracula";
-          publisher = "dracula-theme";
-          version = "2.25.1";
-          sha256 = "ijGbdiqbDQmZYVqZCx2X4W7KRNV3UDddWvz+9x/vfcA=";
+          name = "dark-red-theme";
+          publisher = "rogeraabbccdd";
+          version = "1.0.7";
+          sha256 = "zk/+xW7h4gkTgOPsNJOqFpOIE5dRxj97C6LGE23eTFY=";
         }
         {
           name = "git-graph";
@@ -42,12 +42,6 @@
           version = "0.0.1";
           sha256 = "WCh9Kam2McWmx668or6hD2ZwhzgikB6OXPKnZRDHRt0=";
         } 
-        {
-          name = "material-palenight-theme";
-          publisher = "whizkydee";
-          version = "2.0.4";
-          sha256 = "FpYqzzeLLVRhClMiMxusBXwTaJnqZbmneRnFTkV9nm8=";
-        }
         {
           name = "vim";
           publisher = "vscodevim";
