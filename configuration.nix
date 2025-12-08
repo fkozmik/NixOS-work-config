@@ -53,7 +53,6 @@ in {
     allowUnfreePredicate = (pkg: true);
     permittedInsecurePackages = [
       "electron-27.3.11"
-      "yubikey-manager-qt-1.2.5"
     ];
   };
 

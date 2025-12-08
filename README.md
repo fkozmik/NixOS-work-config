@@ -58,5 +58,4 @@ Most relevant user apps daily drivers:
 - fastfetch
 - tailscale
 - docker
-- thefuck, you know what I mean...
 - and NixOS (Special thanks to you !)

@@ -6,12 +6,13 @@
       nssmdns4 = true;
       openFirewall = true;
     };
+    displayManager.gdm.enable = true;
     fprintd.enable = true;
     fwupd.enable = true;
-    logind = { 
-      lidSwitchDocked = "ignore";
-      powerKey = "lock";
-      powerKeyLongPress = "poweroff";
+    logind.settings.Login = { 
+      HandleLidSwitchDocked = "ignore";
+      HandlePowerKey = "lock";
+      HandlePowerKeyLongPress = "poweroff";
     };
     openssh = {
       enable = true;
@@ -55,7 +56,6 @@
     };
     xserver = {
       enable = true;
-      displayManager.gdm.enable = true;
       xkb = {
         layout = "fr";
         variant = "azerty";

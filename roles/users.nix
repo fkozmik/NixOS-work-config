@@ -50,13 +50,11 @@
       spotify
       spotify-player
       tailscale
-      thefuck
       tmux
       tree
       virt-manager
       wireshark
       xournalpp
-      yubikey-manager-qt
     ]; 
   };
  
