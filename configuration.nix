@@ -37,7 +37,7 @@ in {
   
   nix = {
     nixPath = [ "nixos-config=/home/fkozmik/NixOS-work-config/configuration.nix" ];
-    package = pkgs.nixVersions.nix_2_30;
+    package = pkgs.nixVersions.nix_2_31;
     settings = {
       auto-optimise-store = true;
       experimental-features = [ "nix-command" "flakes" ];
