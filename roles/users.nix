@@ -41,6 +41,7 @@
       mattermost-desktop
       monitor
       nextcloud-client
+      nmap
       nmon
       oh-my-zsh
       openssl
