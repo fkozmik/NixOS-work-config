@@ -1,5 +1,6 @@
 {
   environment.interactiveShellInit = ''
+    alias ap='ANSIBLE_REMOTE_USER=florian.kozmik ansible-playbook -i inventory/common.yml main.yml --diff -K $1'
     alias gs='git status'
     alias gd='git diff'
     alias gl='git log --oneline'
@@ -7,7 +8,7 @@
     alias login="evlogin && vault token renew -increment=2h > /dev/null"
     alias check="nix-shell --command 'make {editorconfig-checker,ansible-lint,tflint,scan-secrets}'"
 
-    alias rebuild="sudo nixos-rebuild switch --impure --flake /home/fkozmik/NixOS-work-config/#skill-issue --show-trace"
+    alias rebuild="sudo nixos-rebuild switch --impure --flake /home/fkozmik/NixOS-work-config/#skill-issue --show-trace $1"
 
     function rebase {
       git fetch upstream
