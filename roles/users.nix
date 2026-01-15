@@ -67,8 +67,8 @@
       after = wantedBy;
       serviceConfig.Type = "oneshot";
       script = ''
-        echo follow-mute > /sys/class/sound/ctl-led/mic/mode
-        echo follow-mute > /sys/class/sound/ctl-led/speaker/mode
+        echo follow-capture > /sys/class/sound/ctl-led/mic/mode
+        echo follow-capture > /sys/class/sound/ctl-led/speaker/mode
       '';
     };
   };

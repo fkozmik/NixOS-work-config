@@ -50,7 +50,7 @@ Applying KISS principle.
 
 Most relevant user apps daily drivers:
 
-- Cosmic Alpha (Gnome 47 as backup)
+- Cosmic Alpha (Gnome as backup)
 - vim and VScodium (with proprietary extensions)
 - zsh
 - Basic `Console` emulator from Cosmic - It's good enough for me
