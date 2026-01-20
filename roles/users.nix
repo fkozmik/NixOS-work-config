@@ -46,6 +46,7 @@
       oh-my-zsh
       openssl
       p7zip
+      pavucontrol
       php
 #      plymouth
       powerline-fonts
