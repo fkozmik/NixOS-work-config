@@ -61,16 +61,4 @@
       xournalpp
     ]; 
   };
- 
-  systemd.services = {
-    configure-sound-leds = rec {
-      wantedBy = [ "sound.target" ];
-      after = wantedBy;
-      serviceConfig.Type = "oneshot";
-      script = ''
-        echo follow-capture > /sys/class/sound/ctl-led/mic/mode
-        echo follow-capture > /sys/class/sound/ctl-led/speaker/mode
-      '';
-    };
-  };
 }
