@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
+  jetbrains.goland
   jetbrains.phpstorm
   vim
   (vscode-with-extensions.override {
