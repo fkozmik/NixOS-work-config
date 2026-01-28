@@ -1,21 +1,21 @@
 {
   environment.interactiveShellInit = ''
-    alias ap='ANSIBLE_REMOTE_USER=florian.kozmik ansible-playbook -i inventory/common.yml main.yml --diff -K $1'
+    # Git stuff
     alias gs='git status'
     alias gd='git diff'
     alias gl='git log --oneline'
-    alias accesscreator="~/Toolbox/vault-tuleap-dynamic-creds-helper.phar"
-    alias login="evlogin && vault token renew -increment=2h > /dev/null"
-    alias check="nix-shell --command 'make {editorconfig-checker,ansible-lint,tflint,scan-secrets}'"
-
-    alias rebuild="sudo nixos-rebuild switch --impure --flake /home/fkozmik/NixOS-work-config/#skill-issue --show-trace $1"
-
     function rebase {
       git fetch upstream
       git checkout main
       git rebase upstream/main
       git push --force-with-lease origin main
     }
+
+    # Infra stuff
+    alias ap='ANSIBLE_REMOTE_USER=florian.kozmik ansible-playbook -i inventory/common.yml main.yml --diff -K $1'
+    alias accesscreator="~/Toolbox/vault-tuleap-dynamic-creds-helper.phar"
+    alias login="evlogin && vault token renew -increment=2h > /dev/null"
+    alias check="nix-shell --command 'make {editorconfig-checker,ansible-lint,tflint,scan-secrets}'"
 
     function go {
         if [ "$1" = "dev" ]; then 
@@ -35,6 +35,13 @@
         fi
     }
 
+    # Nix stuff
+    function package {
+        nix shell "nixpkgs#$1"
+    }
+    alias rebuild="sudo nixos-rebuild switch --impure --flake /home/fkozmik/NixOS-work-config/#skill-issue --show-trace $1"
+
+    # Notes stuff
     function logseq-commit {
         cd ~/Workspace/Logseq
         git add . 

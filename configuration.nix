@@ -6,10 +6,8 @@ let
     (builtins.readDir folder);
   rolesImport = lib.mapAttrsToList (name: _: folder + ("/" + name)) nixFiles;
 in {
-
-  # inherit imports;
   imports =
-    [ ## Includes : 
+    [
       /home/fkozmik/_nixos-work-hidden
     ]++ rolesImport;
 
@@ -36,7 +34,10 @@ in {
   };
   
   nix = {
-    nixPath = [ "nixos-config=/home/fkozmik/NixOS-work-config/configuration.nix" ];
+    nixPath = [
+        "nixpkgs=flake:nixpkgs"
+        "nixos-config=/home/fkozmik/NixOS-work-config/configuration.nix"
+    ];
     package = pkgs.nixVersions.nix_2_31;
     settings = {
       auto-optimise-store = true;
@@ -72,5 +73,5 @@ in {
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.11"; ## Current 25.05
+  system.stateVersion = "23.11"; ## Current 25.11
 }
