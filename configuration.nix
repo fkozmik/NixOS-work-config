@@ -35,8 +35,9 @@ in {
   
   nix = {
     nixPath = [
-        "nixpkgs=flake:nixpkgs"
         "nixos-config=/home/fkozmik/NixOS-work-config/configuration.nix"
+        "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
+        "/nix/var/nix/profiles/per-user/root/channels"
     ];
     package = pkgs.nixVersions.nix_2_31;
     settings = {
