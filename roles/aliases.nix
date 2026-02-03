@@ -15,7 +15,7 @@
     alias ap='ANSIBLE_REMOTE_USER=florian.kozmik ansible-playbook -i inventory/common.yml main.yml --diff -K $1'
     alias accesscreator="~/Toolbox/vault-tuleap-dynamic-creds-helper.phar"
     alias login="evlogin && vault token renew -increment=2h > /dev/null"
-    alias check="nix-shell --command 'make {editorconfig-checker,ansible-lint,tflint,scan-secrets}'"
+    alias check="nix-shell --command 'make {treefmt,tflint,scan-secrets}'"
 
     function go {
         if [ "$1" = "dev" ]; then 
