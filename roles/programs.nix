@@ -8,7 +8,7 @@
     git = {
       config = {
         column = { ui = "auto"; };
-        commit = {verbose = "true"; };
+        commit = {verbose = "false"; }; # https://mas.to/@zekjur/116022397626943871
         help = { autocorrect = "prompt"; };
         init = { defaultBranch = "main"; };
         push = { autoSetupRemote = "true"; };
