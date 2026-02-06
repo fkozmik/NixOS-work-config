@@ -48,7 +48,6 @@
       p7zip
       pavucontrol
       php
-#      plymouth
       powerline-fonts
       qemu_full
       spotify
