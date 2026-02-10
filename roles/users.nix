@@ -48,6 +48,7 @@
       p7zip
       pavucontrol
       php
+      podman-desktop
       powerline-fonts
       qemu_full
       spotify
