@@ -35,6 +35,15 @@
         fi
     }
 
+    # Service stuff
+    function extract {
+    ls ~/Downloads/*.zip 2>/dev/null | grep -E '/[0-9]{6}\.zip$' | while read filepath; do
+      filename=$(basename "$filepath" .zip)
+      cd ~/Downloads/client_logs/ && 7z x "$filepath"
+    done
+    codium ~/Downloads/client_logs/
+    }
+
     # Nix stuff
     function package {
         nix shell "nixpkgs#$1"
