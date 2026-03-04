@@ -26,6 +26,7 @@
     shell = pkgs.zsh;
     packages = with pkgs; [
       baobab
+      claude-code
       dig
       dive
       docker
