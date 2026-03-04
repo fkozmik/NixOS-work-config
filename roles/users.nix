@@ -27,7 +27,6 @@
     packages = with pkgs; [
       baobab
       claude-code
-      dig
       dive
       docker
       fastfetch
@@ -43,7 +42,6 @@
       mattermost-desktop
       monitor
       nextcloud-client
-      nmap
       nmon
       oh-my-zsh
       openssl
@@ -55,11 +53,9 @@
       qemu_full
       spotify
       spotify-player
-      tailscale
       tmux
       tree
       virt-manager
-      wireshark
       xournalpp
     ]; 
   };
