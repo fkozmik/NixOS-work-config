@@ -25,38 +25,52 @@
     extraGroups = [ "networkmanager" "wheel" "docker" "scanner" "lp" "wireshark" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
-      baobab
-      claude-code
-      dive
-      docker
-      fastfetch
-      ffmpeg
-      firefox
-      fprintd
-      gh
-      gitFull
-      glibc
-      google-chrome
-      libreoffice
-      logseq
-      mattermost-desktop
-      monitor
-      nextcloud-client
-      nmon
-      oh-my-zsh
-      openssl
-      p7zip
-      pavucontrol
-      php
-      podman-desktop
-      powerline-fonts
-      qemu_full
-      spotify
-      spotify-player
-      tmux
-      tree
-      virt-manager
-      xournalpp
+        # Laptop administration
+        baobab
+        dive
+        fastfetch
+        fprintd
+        monitor
+        nmon
+        pavucontrol
+        tree
+
+        # Standard tooling
+        ffmpeg
+        firefox
+        glibc
+        google-chrome
+        libreoffice
+        logseq
+        mattermost-desktop
+        nextcloud-client
+        oh-my-zsh
+        powerline-fonts
+        spotify
+        spotify-player
+        xournalpp
+
+        # Network
+        dig
+        nmap
+        openssl
+        tailscale
+        traceroute
+        wireshark
+
+        # Development
+        claude-code
+        docker
+        vim
+        virt-manager
+        gh
+        gitFull
+        jetbrains.phpstorm
+        p7zip
+        php
+        podman-desktop
+        qemu_full
+        tmux
     ]; 
   };
 }

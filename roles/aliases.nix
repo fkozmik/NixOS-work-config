@@ -41,7 +41,6 @@
       filename=$(basename "$filepath" .zip)
       cd ~/Downloads/client_logs/ && 7z x "$filepath"
     done
-    codium ~/Downloads/client_logs/
     }
 
     # Nix stuff
