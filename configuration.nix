@@ -39,7 +39,7 @@ in {
         "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
         "/nix/var/nix/profiles/per-user/root/channels"
     ];
-    package = pkgs.nixVersions.nix_2_31;
+    package = pkgs.nixVersions.nix_2_32;
     settings = {
       auto-optimise-store = true;
       experimental-features = [ "nix-command" "flakes" ];
