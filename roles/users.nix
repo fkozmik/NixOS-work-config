@@ -64,6 +64,8 @@
         gh
         gitFull
         jetbrains.phpstorm
+        k3s
+        minikube
         p7zip
         php
         podman-desktop
