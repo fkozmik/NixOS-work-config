@@ -61,8 +61,6 @@
         # Development
         claude-code
         docker
-        vim
-        virt-manager
         gh
         gitFull
         jetbrains.phpstorm
@@ -71,6 +69,8 @@
         podman-desktop
         qemu_full
         tmux
+        vim
+        virt-manager
     ]; 
   };
 }
