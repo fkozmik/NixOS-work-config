@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-unstable, ... }:
 {
   security = {
     rtkit.enable = true;
@@ -63,7 +63,6 @@
         docker
         gh
         gitFull
-        jetbrains.phpstorm
         k3s
         minikube
         p7zip
@@ -73,6 +72,9 @@
         tmux
         vim
         virt-manager
+
+        # From unstable
+        pkgs-unstable.jetbrains.phpstorm
     ]; 
   };
 }
