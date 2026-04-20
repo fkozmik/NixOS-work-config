@@ -16,6 +16,7 @@
     alias accesscreator="~/Toolbox/vault-tuleap-dynamic-creds-helper.phar"
     alias login="evlogin && vault token renew -increment=2h > /dev/null"
     alias check="nix-shell --command 'make {treefmt,tflint,scan-secrets}'"
+    alias k='kubectl $1'
 
     function go {
         if [ "$1" = "dev" ]; then 

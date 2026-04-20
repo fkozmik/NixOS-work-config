@@ -64,6 +64,8 @@
         gh
         gitFull
         k3s
+        k9s
+        kubernetes-helm
         minikube
         p7zip
         php
