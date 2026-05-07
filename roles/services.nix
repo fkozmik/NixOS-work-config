@@ -1,19 +1,6 @@
 { config, pkgs, ... }:
 {
   services = {
-    avahi = {
-      enable = true;
-      nssmdns4 = true;
-      openFirewall = true;
-    };
-    displayManager.gdm.enable = true;
-    fprintd.enable = true;
-    fwupd.enable = true;
-    logind.settings.Login = { 
-      HandleLidSwitchDocked = "ignore";
-      HandlePowerKey = "lock";
-      HandlePowerKeyLongPress = "poweroff";
-    };
     openssh = {
       enable = true;
       settings.PasswordAuthentication = false;
@@ -42,17 +29,9 @@
         enable_bpf_events = "true";
       };
     };
-    printing.enable = true;
     tailscale = {
       enable = true;
       useRoutingFeatures = "client";
-    };
-    xserver = {
-      enable = true;
-      xkb = {
-        layout = "fr";
-        variant = "azerty";
-      };
     };
   };
 }

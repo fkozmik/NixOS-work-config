@@ -29,26 +29,17 @@
         baobab
         dive
         fastfetch
-        fprintd
         monitor
         nmon
-        pavucontrol
         tree
 
         # Standard tooling
         ffmpeg
-        firefox
         glibc
-        google-chrome
         libreoffice
         logseq
-        mattermost-desktop
-        nextcloud-client
         oh-my-zsh
         powerline-fonts
-        spotify
-        spotify-player
-        xournalpp
 
         # Network
         dig

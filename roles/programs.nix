@@ -1,10 +1,6 @@
 { config, pkgs, ... }:
 {
   programs = {
-    _1password-gui = {
-      enable =  true;
-      polkitPolicyOwners = [ "fkozmik" ];
-    };
     git = {
       config = {
         column = { ui = "auto"; };
