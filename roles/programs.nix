@@ -1,10 +1,6 @@
 { config, pkgs, ... }:
 {
   programs = {
-    _1password-gui = {
-      enable =  true;
-      polkitPolicyOwners = [ "fkozmik" ];
-    };
     git = {
       config = {
         column = { ui = "auto"; };
@@ -23,8 +19,6 @@
       defaultEditor = true;
       enable = true;
     };
-    virt-manager.enable = true;
-    wireshark.enable = true;
     zsh = {
       enable = true;
       enableCompletion = true;

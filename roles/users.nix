@@ -26,37 +26,20 @@
     shell = pkgs.zsh;
     packages = with pkgs; [
         # Laptop administration
-        baobab
         dive
         fastfetch
-        fprintd
-        monitor
         nmon
-        pavucontrol
         tree
 
         # Standard tooling
-        ffmpeg
-        firefox
-        glibc
-        google-chrome
-        libreoffice
-        logseq
-        mattermost-desktop
-        nextcloud-client
         oh-my-zsh
         powerline-fonts
-        spotify
-        spotify-player
-        xournalpp
 
         # Network
         dig
         nmap
         openssl
-        tailscale
         traceroute
-        wireshark
 
         # Development
         claude-code
@@ -69,14 +52,8 @@
         minikube
         p7zip
         php
-        podman-desktop
-        qemu_full
         tmux
         vim
-        virt-manager
-
-        # From unstable
-        pkgs-unstable.jetbrains.phpstorm
-    ]; 
+    ];
   };
 }

@@ -19,16 +19,12 @@
     alias k='kubectl $1'
 
     function go {
-        if [ "$1" = "dev" ]; then 
-          cd ~/tuleap
-          git pull && git reset --hard HEAD
-          nix-shell
-        elif [ "$1" = "infra" ]; then 
-          cd ~/Workspace/enalean-infrastructure && nix-shell
+        if [ "$1" = "infra" ]; then 
+          cd ~/workspace/enalean-infrastructure && nix-shell
         elif [ "$1" = "client" ]; then 
-          cd ~/Workspace/enalean-infrastructure && nix-shell --command "login; return"
+          cd ~/workspace/enalean-infrastructure && nix-shell --command "login; return"
         elif [ "$1" = "git" ]; then
-          cd ~/Workspace/ && ls
+          cd ~/workspace/ && ls
         elif [ "$1" = "tools" ]; then
           cd ~/Toolbox/ && ls
         else
@@ -36,31 +32,10 @@
         fi
     }
 
-    # Service stuff
-    function extract {
-    ls ~/Downloads/*.zip 2>/dev/null | grep -E '/[0-9]{6}\.zip$' | while read filepath; do
-      filename=$(basename "$filepath" .zip)
-      cd ~/Downloads/client_logs/ && 7z x "$filepath"
-    done
-    }
-
     # Nix stuff
     function package {
         nix shell "nixpkgs#$1"
     }
     alias rebuild="sudo nixos-rebuild switch --impure --flake /home/fkozmik/NixOS-work-config/#skill-issue --show-trace $1"
-
-    # Notes stuff
-    function logseq-commit {
-        cd ~/Workspace/Logseq
-        git add . 
-        git commit -m "`date +%H:%M`"
-    }
-
-    function logseq-push {
-          logseq-commit
-          git push origin main
-    }
-
   '';
 }

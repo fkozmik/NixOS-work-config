@@ -6,12 +6,7 @@ let
     (builtins.readDir folder);
   rolesImport = lib.mapAttrsToList (name: _: folder + ("/" + name)) nixFiles;
 in {
-  imports =
-    [
-      /home/fkozmik/_nixos-work-hidden
-    ]++ rolesImport;
-
-  console.keyMap = "fr";
+  imports = rolesImport;
 
   i18n = {
     defaultLocale = "fr_FR.UTF-8";
@@ -29,8 +24,7 @@ in {
   };
 
   networking = {
-    hostName = "skill-issue"; 
-    networkmanager.enable = true;
+    hostName = "skill-issue-wsl";
   };
   
   nix = {
@@ -65,7 +59,6 @@ in {
       enable = true;
       storageDriver = "overlay2";
     };
-    libvirtd.enable = true;
   };
 
   # This value determines the NixOS release from which the default
